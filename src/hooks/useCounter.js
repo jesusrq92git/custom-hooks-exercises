@@ -11,11 +11,11 @@ const useCounter = (initial) => {
     setCounter(initial);
   }
 
-  return[
+  return {
     counter,
     increment,
     reset
-  ]
+  }
 }
 
 export default useCounter;

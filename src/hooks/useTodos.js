@@ -15,11 +15,11 @@ const useTodos = (initial) => {
     setTodos(todos.filter(todo => todo.id !== todoId));
   }
 
-  return[
+  return {
     todos,
     addTodo,
     deleteTodo
-  ]
+  }
 }
 
 export default useTodos;

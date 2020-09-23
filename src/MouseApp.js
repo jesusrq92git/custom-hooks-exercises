@@ -2,7 +2,7 @@ import React from 'react';
 import useBackground from './hooks/useBackground';
 
 const MouseApp = () => {
-  const { position, background } = useBackground();
+  const { background, position } = useBackground();
 
   return (
     <div>

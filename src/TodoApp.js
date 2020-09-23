@@ -7,7 +7,7 @@ const initialTodos = [
 ]
 
 const TodoApp = (initial) => {
-  const [todos, addTodo, deleteTodo] = useTodos(initialTodos);
+  const { todos, addTodo, deleteTodo } = useTodos(initialTodos);
   
   return(
     <div>

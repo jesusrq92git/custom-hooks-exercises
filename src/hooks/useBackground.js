@@ -4,7 +4,7 @@ const useBackground = () => {
   const position = useMousePosition();
   const background = position.x < window.innerWidth/2 ? 'pink' : 'orange';
 
-  return { position, background }
+  return { background, position }
 }
 
 export default useBackground;
