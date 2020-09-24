@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useTodos from './hooks/useTodos';
 
 const initialTodos = [
@@ -7,14 +7,23 @@ const initialTodos = [
   { id: 3, title: 'Learn Redux'},
 ]
 
-const TodoApp = (initial) => {
+const TodoApp = () => {
   const { todos, addTodo, deleteTodo } = useTodos(initialTodos);
+  const [ newtitle, setNewtitle ] = useState("");
+ 
+  const handleChange = (value) => {
+    setNewtitle(value);
+  }
   
   return(
     <div>
-      <button 
-        onClick={() => addTodo({title: 'Nueva tarea'}) }
-      >
+      <input 
+        type="text" 
+        name="toadd" 
+        value={newtitle} 
+        onChange={ (e)=>handleChange(e.target.value) } 
+      />
+      <button onClick={() => addTodo({title: newtitle}) }>
         Add
       </button>
       <ul>
@@ -23,7 +32,8 @@ const TodoApp = (initial) => {
             <li key={todo.id}>
               {todo.title}
               <button
-                onClick={() => deleteTodo(todo.id) }  
+                onClick={() => deleteTodo(todo.id) }
+                style={{'marginLeft':'10px'}}
               >
                 Delete
               </button>
