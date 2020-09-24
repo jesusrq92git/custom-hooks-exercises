@@ -4,6 +4,7 @@ import useTodos from './hooks/useTodos';
 const initialTodos = [
   { id: 1, title: 'Learn React'},
   { id: 2, title: 'Learn Node'},
+  { id: 3, title: 'Learn Redux'},
 ]
 
 const TodoApp = (initial) => {
@@ -12,11 +13,7 @@ const TodoApp = (initial) => {
   return(
     <div>
       <button 
-        onClick={
-          () => {
-            addTodo({title: 'Nueva tarea'}) 
-          }
-        }
+        onClick={() => addTodo({title: 'Nueva tarea'}) }
       >
         Add
       </button>
@@ -26,11 +23,7 @@ const TodoApp = (initial) => {
             <li key={todo.id}>
               {todo.title}
               <button
-                onClick={
-                  () => {
-                    deleteTodo(todo.id) 
-                  }
-                }  
+                onClick={() => deleteTodo(todo.id) }  
               >
                 Delete
               </button>

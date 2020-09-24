@@ -3,6 +3,7 @@ import useCounter from './hooks/useCounter';
 
 const CounterApp = () => {
   const { counter, increment, reset } = useCounter(0);
+  
   return(
     <div>
       <h1>Clicks: {counter}</h1>

@@ -6,8 +6,10 @@ const MouseApp = () => {
 
   return (
     <div>
-      <pre style={{ background, height: '100vh' }}>
-        {JSON.stringify(position, null, 2)}
+      <pre 
+        style={{ background, height: '100vh' }}
+      >
+        { JSON.stringify(position, null, 2) }
       </pre>
     </div>
   )

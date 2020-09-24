@@ -3,10 +3,12 @@ import CounterApp from "./CounterApp";
 import TodoApp from "./TodoApp";
 import MouseApp from "./MouseApp";
 
-export default function App() {
+const App = () => {
   return (
     <div>
-      <CounterApp />
+      <TodoApp />
     </div>
   );
 }
+
+export default App;
