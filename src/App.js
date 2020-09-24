@@ -6,7 +6,7 @@ import MouseApp from "./MouseApp";
 const App = () => {
   return (
     <div>
-      <TodoApp />
+      <MouseApp />
     </div>
   );
 }
